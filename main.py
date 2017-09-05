@@ -5,7 +5,7 @@ from scipy import stats
 x_labels = ['soleado', 'nublado', 'lluvia']
 colors = ['yellow', 'gray', 'blue']
 data = np.loadtxt('tiempos.txt', delimiter=' ', skiprows=1, usecols=[1,2,3])
-clean_data = np.loadtxt('tiempos_limpios.txt', delimiter=' ', skiprows=1, usecols=[1,2,3])
+clean_data = np.loadtxt('tiempos_limpios.txt', delimiter=' ', skiprows=1, usecols=[1,2,3]) # limpiados a mano
 
 def plot_times(data):
   x = [0, 1, 2]
@@ -128,10 +128,10 @@ def permutation_test(data):
   plt.grid(True)
   plt.show()
 
-plot_times(data)
-plot_times(clean_data)
-plot_avg_std(clean_data)
+# plot_times(data)
+# plot_times(clean_data)
+# plot_avg_std(clean_data)
+# paired_ttest(clean_data)
 pearson_correlation(clean_data)
-paired_ttest(clean_data)
-wilcoxon(clean_data)
-permutation_test(clean_data)
+# wilcoxon(clean_data)
+# permutation_test(clean_data)
